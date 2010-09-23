@@ -1,0 +1,73 @@
+#1.6
+
+p_0 = probability of heads not coming up.
+This can only happen if the result is
+
+ TT 
+
+which has probabilty of w^2.
+
+p_1 = probabilty of exactly one heads coming up
+The combinations that will result in this are
+
+ TH
+ HT
+
+which as a 2*w*u probabilty of occurring.
+
+p_2 = probability of exactly two heads coming up
+
+which can only happen with
+
+ HH
+
+this has probabilty of u^2 of occurring.
+
+Since u^2=w^2, u = w (since all probabilities are positive). 
+But this means that u^2=2*w*u=2*u^2, which menas u=w=0. This
+is not possible since all possibilities must sum to 1. So
+the three outcomes cannot have the same chance of occurring.
+
+
+#1.7
+
+(a)
+
+The area, D, of a region of point value i, where i > 0, is
+
+D(i) = pi( (6-i)^2 - (5-i)^2 ) * pi*r^2/5^2
+
+So the probability function is
+
+P(i) = { A - pi r^2	i = 0
+       { D(i) / A	i != 0 
+
+
+(b)
+
+Given the board is hit, then we calculate
+
+P(i|"Board Hit") = P(i)/P("Board Hit")
+
+Since
+
+P("Board Hit") = pi*r^2 / A
+
+we obtain
+
+P(i|"Board Hit") = (D(i)/A) /(pi*r^2/A) = D(i)/(pi*r^2)
+
+this yields finally
+
+P(i|"Board Hit") = ((6-i)^2 - (5-i)^2)/5^2
+
+which is the same as the probability distribution of Example 1.2.7
+
+#1.20
+
+I'm assuming in this problem that the question is asked at the begining of 
+the week.
+
+We think of there being 7 bins, each has equal probability of a call falling into.
+We can think of there being 12 decisions, each with 7 options, giving 7^12 possibilities.
+However, the order doesn't matter, so we factor out 12!
