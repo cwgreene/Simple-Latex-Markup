@@ -94,3 +94,41 @@ accomplishes this
 %
 %
 
+#1.21
+Consider the following sequence of selections, the first has 2n options,
+but the second pick has 2n-2 options, one less shoe, and inabilty to select
+the pair. So we have
+
+2*n*(2*n-2)*(2*n-4)*...(2*n-2*2*r)
+
+We can factor out 2, 2*r times. This yields
+
+2^(2*r)*n!/(2*r)
+
+Of course, the order doesn't matter ultimately, so we can divide out by
+(n-2*r)!. This yields
+
+( n )
+(2*r)*(2^(2*r))
+
+And then, to obtain the probability, we divide out by all possible ways of
+picking 2*r shoes from 2*n shoes. This yields
+
+(n 2*r) *2^(2*r)/(2*n 2*r)
+
+#1.29
+
+#1.36
+This is the complement of not hitting it at least twice, which is the
+sum of 
+
+~P(x) = (4/5)^9*(1/5)(10 1) + (1/5)^10
+
+So P(x) = 1-~P(x).
+
+If it is hit at least once, than again, it is the complement, but
+we rule out the situation where it is never hit. So the probability is
+
+P(x) = (10 1) * (1/5)^9
+
+
